@@ -1,6 +1,8 @@
 # antimicro-nonX
 Emulate some of Antimicro's functionality for console programs, without X support
 
+![Demo](https://img.youtube.com/vi/wxVN7NHgjcU/0.jpg)](https://www.youtube.com/watch?v=wxVN7NHgjcU)
+
 # Installation
 ```
 sudo apt-get install python3-yaml
