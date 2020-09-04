@@ -1,0 +1,28 @@
+# path to the input device to listen to
+input_device: /dev/input/event3
+# choose to react to key press (False) or key release (True)
+react_on_release: True
+# a list of mappings
+key_mapping:
+  # run a command in a background thread when pressing "a"
+  # the parameter is a string that gets executed
+  KEY_A: /usr/bin/logger -s -t "test" "Running because 'a' was pressed"
+
+  # input CTRL+C when pressing "s"
+  # each key in the list is "pressed" and "released" simultaneously
+  KEY_S: 
+    - KEY_LEFTCTRL
+    - KEY_C
+  
+  # send a two key sequence (capital O, small k) when pressing "w"
+  # there is a 0.5s sleep time between key presses to allow the system time to process them
+  KEY_W:
+    -
+      - KEY_LEFTSHIFT
+      - KEY_O
+    -
+      - KEY_K
+  
+
+# Note - key modifiers (ALT, CTRL, Shift) need to be specified before the keys
+

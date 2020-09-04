@@ -1,0 +1,61 @@
+# This is an example mapping for the Hardkernel Odroid Go Advance
+# for use with ncmpc
+
+# Bind to the keyboard
+input_device: /dev/input/event2
+# process events on button release instead of pre_tasks
+react_on_release: True
+
+key_mapping:
+  # DPAD injects arrows
+  BTN_DPAD_UP: 
+    - KEY_UP
+  BTN_DPAD_DOWN:
+    - KEY_DOWN
+  BTN_DPAD_LEFT:
+    - KEY_LEFT
+  BTN_DPAD_RIGHT:
+    - KEY_RIGHT
+
+  # inject key "2"/"3" to select the desired screen
+  BTN_TRIGGER_HAPPY1:
+    - KEY_2
+  BTN_TRIGGER_HAPPY2:
+    - KEY_3
+  # send a sequence of 5 "b"s to reverse by 10 seconds 
+  BTN_TRIGGER_HAPPY3:
+    -
+      - KEY_B
+    -
+      - KEY_B
+    - 
+      - KEY_B
+    - 
+      - KEY_B  
+    - 
+      - KEY_B
+  # send a sequence of 5 "f"s to go forward by 10s
+  BTN_TRIGGER_HAPPY4:
+    -
+      - KEY_F
+    -
+      - KEY_F
+    - 
+      - KEY_F
+    - 
+      - KEY_F  
+    - 
+      - KEY_F
+  # Enter
+  BTN_WEST:
+    - KEY_ENTER
+  # Inject a capital P
+  BTN_SOUTH: 
+    - KEY_LEFTSHIFT
+    - KEY_P
+  # Inject an "a"
+  BTN_EAST:
+    - KEY_A
+  # Inject a "d"
+  BTN_NORTH:
+    - KEY_D

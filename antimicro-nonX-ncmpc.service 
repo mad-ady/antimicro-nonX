@@ -1,0 +1,10 @@
+[Unit]
+Description=Antimicro-nonX for ncmpc
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/antimicro-nonX.py "/etc/antimicro-nonX.yaml"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
